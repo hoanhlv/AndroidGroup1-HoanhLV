@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.huy.androidcourseapp'
+    namespace 'com.hoanhlv.androidcourseapp'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.huy.androidcourseapp"
+        applicationId "com.hoanhlv.androidcourseapp"
         minSdk 24
         targetSdk 33
         versionCode 1

@@ -12,6 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidCourseApp"
         tools:targetApi="31">
+
+        <activity
+            android:name=".practices.Practice7"
+            android:exported="false" />
+        <activity
+            android:name=".practices.Practice5"
+            android:exported="false" />
+        <activity
+            android:name=".practices.Practice6_Greeting"
+            android:exported="false" />
+        <activity
+            android:name=".practices.Practice6"
+            android:exported="false" />
         <activity
             android:name=".practices.Practice4"
             android:exported="false" />
@@ -34,10 +47,23 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.SENDTO" />
+                <action android:name="android.intent.action.CALL" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name=".practices.Practice7_Receiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.hoanhlv.CUSTOM_ACTION"/>
+                <action android:name="android.intent.action.AIRPLANE_MODE"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

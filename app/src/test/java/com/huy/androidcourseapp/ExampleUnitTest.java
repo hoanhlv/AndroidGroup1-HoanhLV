@@ -1,4 +1,4 @@
-package com.huy.androidcourseapp;
+package com.hoanhlv.androidcourseapp;
 
 import org.junit.Test;
 

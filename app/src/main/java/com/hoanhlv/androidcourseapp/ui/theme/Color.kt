@@ -1,4 +1,4 @@
-package com.huy.androidcourseapp.ui.theme
+package com.hoanhlv.androidcourseapp.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

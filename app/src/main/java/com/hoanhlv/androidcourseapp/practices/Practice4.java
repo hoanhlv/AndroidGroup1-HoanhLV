@@ -1,4 +1,4 @@
-package com.huy.androidcourseapp.practices;
+package com.hoanhlv.androidcourseapp.practices;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,8 +15,7 @@ import android.widget.EditText;
 import android.widget.TabHost;
 import android.widget.TimePicker;
 
-import com.huy.androidcourseapp.MainActivity;
-import com.huy.androidcourseapp.R;
+import com.hoanhlv.androidcourseapp.R;
 
 import java.util.Calendar;
 
@@ -35,7 +33,7 @@ public class Practice4 extends AppCompatActivity implements View.OnClickListener
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("Practice 4 - Date, Time, Tab");
+        actionBar.setTitle(this.getIntent().getStringExtra("practiceName") + "");
 
         setDateButton = findViewById(R.id.setDateButton);
         setTimeButton = findViewById(R.id.setTimeButton);
@@ -71,8 +69,7 @@ public class Practice4 extends AppCompatActivity implements View.OnClickListener
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        Intent homeIntent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(homeIntent);
+        finish();
         return true;
     }
 

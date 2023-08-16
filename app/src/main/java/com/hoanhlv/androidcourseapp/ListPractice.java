@@ -1,4 +1,4 @@
-package com.huy.androidcourseapp;
+package com.hoanhlv.androidcourseapp;
 
 import android.app.Activity;
 import android.os.Bundle;

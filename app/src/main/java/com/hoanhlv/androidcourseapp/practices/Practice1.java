@@ -1,23 +1,19 @@
-package com.huy.androidcourseapp.practices;
+package com.hoanhlv.androidcourseapp.practices;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.KeyEvent;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.huy.androidcourseapp.MainActivity;
-import com.huy.androidcourseapp.R;
+import com.hoanhlv.androidcourseapp.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +27,7 @@ public class Practice1 extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("Practice 1 - Android Components");
+        actionBar.setTitle(this.getIntent().getStringExtra("practiceName") + "");
 
         // number picker
         NumberPicker numberPicker = findViewById(R.id.numberPicker);
@@ -69,8 +65,7 @@ public class Practice1 extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        Intent homeIntent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(homeIntent);
+        finish();
         return true;
     }
 
